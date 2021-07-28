@@ -1,0 +1,23 @@
+{
+  "name": "mod4",
+  "version": "0.0.1",
+  "description": "Criação da API de escola referente ao projeto do módulo 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon ./src/server.js",
+    "populate": "node ./src/infra/cria-bd.js"
+  },
+  "author": "Sâmela Barbosa",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
+  }
+}
