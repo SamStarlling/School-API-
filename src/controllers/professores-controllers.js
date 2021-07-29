@@ -17,12 +17,23 @@ module.exports = (app, bd) => {
   app.get('/escola/professores/:ID', async (req, res) => {
     try {
       const id = req.params.ID
-      const respostaMotraProfessor = await DaoProfessores.MostraProfessor(id)
-      res.json({resultado: respostaMotraProfessor});
-
+      if(parseInt(id)) {
+        const respostaMotraProfessor = await 
+        DaoProfessores.MostraProfessor(id);
+        if(respostaMotraProfessor) {
+          res.json({resultado: respostaMotraProfessor});
+        }
+        else {
+          throw new Error("Nenhum usuario encontrado");
+        }
+      }
+      else {
+        throw new Error("Nenhum usuario encontrado");
+      }
+      
     }
     catch(error){
-      res.json({mensagem: error.mensagem});
+      res.status(500).json({mensagem: error.mensagem});
     }
   })
   app.post('/escola/professores', async (req, res) => {
