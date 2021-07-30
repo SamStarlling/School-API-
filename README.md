@@ -4,12 +4,12 @@
 <!--ts-->
    * [Sobre](#Sobre)
    * [Instalação](#instalacao)
-   * [Testando as rotas](#comoUsar)
+   * [Testando as rotas](#rotas)
       * [GET](#get)
       * [GET/ID](#getId)
       * [POST](#post)
-      * [DELETE](#delete)
       * [PUT](#put)
+      * [DELETE](#delete)
    * [Tecnologias Usadas](#tecnologias)
 <!--te-->
 
@@ -28,11 +28,62 @@
 
 <div id= "Instalação">
 <h1 align="center">Instalação</h1>
-
+  <h3>Para instalar todas as dependências do projeto utilize o comando abaixo no terminal</h3>
+  
 ```bash
 npm install
 ```
+  
+</div> </br>
 
-<h3><h3>
+<div id= "rotas">
+<h1 align="center">Rotas</h1>
+  <h3>Consultas do banco de dados seguindo o padrão CRUD</h3>
 
+  <div id= "get">
+    <h3>Método HTTP GET para mostrar todos os professores do banco</h3>
+    
+```bash
+http://localhos:9810/escola/professores
+```
+    
+  </div></br>
+  
+  <div id= "getID">
+    <h3>Método HTTP GET para mostrar o professor do banco referente ao id passado como parâmetro</h3>
+    
+```bash
+http://localhos:9810/escola/professores/1
+```
+    
+  </div></br>
+  
+  <div id= "post">
+    <h3>Método HTTP POST para inserir um novo professor no banco</h3>
+    
+```bash
+http://localhos:9810/escola/professores
+```
+    
+  </div></br>
+  
+  <div id= "put">
+    <h3>Método HTTP PUT para atualizar as informações de um professor no banco pelo id</h3>
+    
+```bash
+http://localhos:9810/escola/professores/1
+```
+    
+  </div>
+  
+  
+  <div id= "delete">
+    <h3>Método HTTP DELETE para deletar um professor do banco pelo id</h3>
+    
+```bash
+http://localhos:9810/escola/professores/1
+```
+    
+  </div>
 </div>
+
