@@ -1,89 +1,67 @@
-# Projeto Módulo 4 - API Escola
+# School API
 
-## Índice
-<!--ts-->
-   * [Sobre](#Sobre)
-   * [Instalação](#instalacao)
-   * [Testando as rotas](#rotas)
-      * [GET](#get)
-      * [GET/ID](#getId)
-      * [POST](#post)
-      * [PUT](#put)
-      * [DELETE](#delete)
-   * [Tecnologias Usadas](#tecnologias)
-<!--te-->
-
-<div id= "Sobre">
-<h1 align="center">Projeto Módulo 4 - API Escola</h1>
+The objective of this project was to put in practice the create a database and the sever.
 
 
-<h3>Projeto final do módulo 4 com objetivo de desenvolver uma API seguindo a arquitetura REST e os padrões de projeto MVC e CRUD</h3>
+## Features
 
-- CREATE: POST </br>
-- READ: GET </br>
-- UPDATE: PUT</br>
-- DELETE: DELETE</br>
+- Visual studio code
+- Node.js
+- Postman or Insominia
 
-</div></br>
-
-<div id= "Instalação">
-<h1 align="center">Instalação</h1>
-  <h3>Para instalar todas as dependências do projeto utilize o comando abaixo no terminal</h3>
   
-```bash
-npm install
-```
-  
-</div> </br>
+## Installation
 
-<div id= "rotas">
-<h1 align="center">Rotas</h1>
-  <h3>Consultas do banco de dados seguindo o padrão CRUD</h3>
+Install my project with npm
 
-  <div id= "get">
-    <h3>Método HTTP GET para mostrar todos os professores do banco</h3>
-    
 ```bash
-http://localhos:9810/escola/professores
+  npm install
 ```
     
-  </div></br>
-  
-  <div id= "getID">
-    <h3>Método HTTP GET para mostrar o professor do banco referente ao id passado como parâmetro</h3>
-    
-```bash
-http://localhos:9810/escola/professores/1
-```
-    
-  </div></br>
-  
-  <div id= "post">
-    <h3>Método HTTP POST para inserir um novo professor no banco</h3>
-    
-```bash
-http://localhos:9810/escola/professores
-```
-    
-  </div></br>
-  
-  <div id= "put">
-    <h3>Método HTTP PUT para atualizar as informações de um professor no banco pelo id</h3>
-    
-```bash
-http://localhos:9810/escola/professores/1
-```
-    
-  </div>
-  
-  
-  <div id= "delete">
-    <h3>Método HTTP DELETE para deletar um professor do banco pelo id</h3>
-    
-```bash
-http://localhos:9810/escola/professores/1
-```
-    
-  </div>
-</div>
+## API Reference
 
+#### Get all professors
+
+```http
+  GET localhost:9810/escola/professores
+```
+Display an object JSON with all professors into the database.
+
+#### Get professor
+
+```http
+  GET localhost:9810/escola/professores/${ID}
+```
+
+| Parametro | Tipo     | Description                         |
+| :-------- | :------- | :---------------------------------- |
+| `ID`      | `number` | **Required**. ID of fetch professor |
+
+#### Post professor
+
+```http
+  POST localhost:9810/escola/professores
+```
+
+Insert professor into the database.
+
+```http
+  PUT localhost:9810/escola/professores/${ID}
+```
+
+| Parametro | Tipo     | Description                         |
+| :-------- | :------- | :---------------------------------- |
+| `ID`      | `number` | **Required**. ID of fetch and update professor |
+
+
+```http
+  DELETE localhost:9810/escola/professores/${ID}
+```
+
+| Parametro | Tipo     | Description                         |
+| :-------- | :------- | :---------------------------------- |
+| `ID`      | `number` | **Required**. ID of fetch and delete professor |
+
+## 🚀 About Me
+I'm a student full stack developer at Resilia Educação...
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/s%C3%A2mela-barbosa-web-developer/)
